@@ -8,26 +8,26 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class ProductsType2 extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Long Sleeve Leopard T-Shirt" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Long Sleeve Leopard T-Shirt" 
-                /> 
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Long Sleeve Leopard T-Shirt" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Long Sleeve Leopard T-Shirt" 
+        /> 
 
-                <ProductDetailsStyleTwo />
+        <ProductDetailsStyleTwo />
 
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default ProductsType2;

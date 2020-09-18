@@ -8,24 +8,24 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class Cart extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Cart" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Cart" 
-                /> 
-                <CartTable /> 
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Cart" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Cart" 
+        /> 
+        <CartTable /> 
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Cart;

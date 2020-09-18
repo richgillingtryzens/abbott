@@ -15,29 +15,29 @@ import PopularProducts from '../components/HomeOne/PopularProducts';
 import BestSellingProducts from '../components/HomeOne/BestSellingProducts';
 
 const Index = ({ products }) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <MainBanner />
-            <CategoriesBanner />
-            <RecentProducts products={products} />
-            <OfferStyleOne />
-            <PopularProducts products={products} />
-            <FacilitySlider />
-            <BestSellingProducts products={products} />
-            <Partner />
-            <RecentBlogPost />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <MainBanner />
+      <CategoriesBanner />
+      <RecentProducts products={products} />
+      <OfferStyleOne />
+      <PopularProducts products={products} />
+      <FacilitySlider />
+      <BestSellingProducts products={products} />
+      <Partner />
+      <RecentBlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'Women Clothes' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'Women Clothes' )
+  }
 }
 
 export default connect(mapStateToProps)(Index);

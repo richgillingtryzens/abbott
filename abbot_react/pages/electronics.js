@@ -11,31 +11,31 @@ import Footer from '../components/Layouts/Footer';
 import RecentProducts from '../components/Shared/RecentProducts';
 
 const Electronics = ({ products }) => {
-    console.log(products)
-    return (
-       <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <Banner />
-            <CategoryBanner />
-            <RecentProducts products={products.slice(0, 9)} />
+  console.log(products)
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <Banner />
+      <CategoryBanner />
+      <RecentProducts products={products.slice(0, 9)} />
 
-            <div className="testimonials-section">
-                <Testimonials />
-            </div>
+      <div className="testimonials-section">
+        <Testimonials />
+      </div>
 
-            <BlogPost />
-            <InstagramFeed />
-            <Footer />
-       </React.Fragment>
-    )
+      <BlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  )
 }
 
 const mapStateToProps = (state) => {
-    const products = state.products.filter( product => product.type == 'electronics' )
-    return {
-        products: products
-    }
+  const products = state.products.filter( product => product.type == 'electronics' )
+  return {
+    products: products
+  }
 }
 
 export default connect(mapStateToProps)(Electronics)

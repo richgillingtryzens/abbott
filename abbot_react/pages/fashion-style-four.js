@@ -15,29 +15,29 @@ import RecentBlogPost from '../components/Common/RecentBlogPost';
 import InstagramFeed from '../components/Common/InstagramFeed';
 
 const HomeFour = ({ products }) => {
-    return (
-        <React.Fragment>
-            <TopHeaderTwo />
-            <NavbarTwo />
-            <Banner />
-            <Categories />
-            <RecentProducts products={products} />
-            <OfferProducts />
-            <PopularProducts products={products} />
-            <FacilitySlider />
-            <BestSellingProducts products={products} />
-            <ShopByBrand />
-            <RecentBlogPost />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeaderTwo />
+      <NavbarTwo />
+      <Banner />
+      <Categories />
+      <RecentProducts products={products} />
+      <OfferProducts />
+      <PopularProducts products={products} />
+      <FacilitySlider />
+      <BestSellingProducts products={products} />
+      <ShopByBrand />
+      <RecentBlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'Women Clothes' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'Women Clothes' )
+  }
 }
 
 export default connect(mapStateToProps)(HomeFour);

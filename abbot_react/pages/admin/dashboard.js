@@ -10,50 +10,50 @@ import ProductTrendsByMonth from '../../components/Admin/ProductTrendsByMonth';
 
 class Dashboard extends Component {
     state = {
-        ordersData: [],
-        loading: true
+      ordersData: [],
+      loading: true
     };
     componentDidMount(){
-        const db = firebase.firestore();
-        const dbOrderRef = db.collection('orders');
-        let orderArray = [];
-        dbOrderRef.get()
+      const db = firebase.firestore();
+      const dbOrderRef = db.collection('orders');
+      let orderArray = [];
+      dbOrderRef.get()
         .then(res => {
-            res.forEach(doc => {
-                let orderObj = doc.data();
-                orderObj.id = doc.id;
-                orderArray.push(orderObj)
-            });
-            this.setState({
-                ordersData: orderArray
-            })
-            this.loading = false;
+          res.forEach(doc => {
+            let orderObj = doc.data();
+            orderObj.id = doc.id;
+            orderArray.push(orderObj)
+          });
+          this.setState({
+            ordersData: orderArray
+          })
+          this.loading = false;
         })
         .catch(err => {
-            console.log('error', err)
+          console.log('error', err)
         });
     }
     render(){
-        const chart = this.state.ordersData.length ? <LineChart data={this.state.ordersData} /> : null;
-        return(
-            <React.Fragment>
-                <LeftSidebar />
+      const chart = this.state.ordersData.length ? <LineChart data={this.state.ordersData} /> : null;
+      return(
+        <React.Fragment>
+          <LeftSidebar />
                   
-                <div className="admin-main-content d-flex flex-column">
-                    <div className="page-header">
-                        <h2>Dashboard</h2>
-                    </div>
-                    <SalesInfo />
-                    <MonthlyRevenue />
-                    <ProductTrendsByMonth />
-                    {chart}
-                    {/* <RecentOrders /> */}
+          <div className="admin-main-content d-flex flex-column">
+            <div className="page-header">
+              <h2>Dashboard</h2>
+            </div>
+            <SalesInfo />
+            <MonthlyRevenue />
+            <ProductTrendsByMonth />
+            {chart}
+            {/* <RecentOrders /> */}
                    
-                   {/* Footer */}
-                   <div className="flex-grow-1"></div>
-                </div>
-            </React.Fragment>
-        );
+            {/* Footer */}
+            <div className="flex-grow-1"></div>
+          </div>
+        </React.Fragment>
+      );
     }
 }
 

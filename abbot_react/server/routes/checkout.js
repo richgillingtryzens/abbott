@@ -8,13 +8,13 @@ const stripe = require('stripe')(keys.stripeSecretKey);
 const router = express.Router();
 
 router.post('/', async (req, res) => {
-    await stripe.charges.create({
-        amount: req.body.amount,
-        currency: 'usd',
-        description: 'Livani - React Next',
-        source: req.body.token.id
-    });
-    res.send({})
+  await stripe.charges.create({
+    amount: req.body.amount,
+    currency: 'usd',
+    description: 'Livani - React Next',
+    source: req.body.token.id
+  });
+  res.send({})
 });
 
 module.exports = router;

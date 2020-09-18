@@ -1,0 +1,22 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "env": {
+        "node": true,
+        "jest": true,
+        "browser": true
+    },
+    "rules": {
+        "indent": ["error", 2, {"ignoredNodes": ["TemplateLiteral"]}],
+        "react/react-in-jsx-scope": "off",
+      "react/prop-types": 0,
+      "react/no-unescaped-entities": 0,
+      "react/no-unused-vars": 0
+    },
+    "globals": {
+      "React": "writable"
+    }
+  }

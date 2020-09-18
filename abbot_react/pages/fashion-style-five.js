@@ -15,29 +15,29 @@ import Partner from '../components/Common/Partner';
 import RecentBlogPost from '../components/Common/RecentBlogPost';
 
 const HomeFive = ({ products }) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <Banner />
-            <Categories />
-            <RecentProducts products={products.slice(0, 4)} />
-            <Offer />
-            <PopularProducts products={products.slice(0, 4)} />
-            <FacilitySlider />
-            <BestSellingProducts products={products.slice(0, 4)} />
-            <Partner />
-            <RecentBlogPost />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <Banner />
+      <Categories />
+      <RecentProducts products={products.slice(0, 4)} />
+      <Offer />
+      <PopularProducts products={products.slice(0, 4)} />
+      <FacilitySlider />
+      <BestSellingProducts products={products.slice(0, 4)} />
+      <Partner />
+      <RecentBlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'Women Clothes' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'Women Clothes' )
+  }
 }
 
 export default connect(mapStateToProps)(HomeFive);

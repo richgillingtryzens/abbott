@@ -14,28 +14,28 @@ import RecentBlogPost from '../components/Covid19/RecentBlogPost';
 import InstagramFeed from '../components/Covid19/InstagramFeed';
 
 const Covid19 = ({ products }) => {
-    return(
-        <React.Fragment>
-            <TopHeaderTwo />
-            <NavbarTwo />
-            <Banner />
-            <RecentProducts products={products.slice(0, 6)} />
-            <OfferArea />
-            <PopularProducts products={products.slice(6, 12)} />
-            <FacilitySlider />
-            <BestSellingProducts products={products.slice(9, 15)} />
-            <ShopByBrand />
-            <RecentBlogPost />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return(
+    <React.Fragment>
+      <TopHeaderTwo />
+      <NavbarTwo />
+      <Banner />
+      <RecentProducts products={products.slice(0, 6)} />
+      <OfferArea />
+      <PopularProducts products={products.slice(6, 12)} />
+      <FacilitySlider />
+      <BestSellingProducts products={products.slice(9, 15)} />
+      <ShopByBrand />
+      <RecentBlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'medical' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'medical' )
+  }
 }
 
 export default connect(mapStateToProps)(Covid19)

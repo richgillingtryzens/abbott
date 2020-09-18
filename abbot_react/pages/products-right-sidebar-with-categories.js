@@ -10,31 +10,31 @@ import Footer from '../components/Layouts/Footer';
 import Category from '../components/Common/Category';
 
 const ProductsRightSidebarWithCategories = ({products}) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <PageBanner 
-                pageTitle="Men's" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Products" 
-            /> 
-            <Category />
-            <section className="products-area pb-70">
-                <ProductsWithRightSidebar products={products} />
-            </section>
-            <FacilitySlider />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <PageBanner 
+        pageTitle="Men's" 
+        homePageUrl="/" 
+        homePageText="Home" 
+        activePageText="Products" 
+      /> 
+      <Category />
+      <section className="products-area pb-70">
+        <ProductsWithRightSidebar products={products} />
+      </section>
+      <FacilitySlider />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products
-    }
+  return {
+    products: state.products
+  }
 }
 
 export default connect(mapStateToProps)(ProductsRightSidebarWithCategories);

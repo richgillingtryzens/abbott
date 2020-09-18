@@ -5,16 +5,16 @@ import withAuth from '../../helpers/withAuth';
 import OrdersTable from '../../components/Admin/orders/OrdersTable';
 
 class Orders extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <TopNavbar />
-                <LeftSidebar />
+  render() {
+    return (
+      <React.Fragment>
+        <TopNavbar />
+        <LeftSidebar />
  
-                <OrdersTable />
-            </React.Fragment>
-        );
-    }
+        <OrdersTable />
+      </React.Fragment>
+    );
+  }
 }
 
 export default withAuth(Orders);

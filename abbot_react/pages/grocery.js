@@ -13,27 +13,27 @@ import PopularProducts from '../components/HomeGrocery/PopularProducts';
 import BestSellingProducts from '../components/HomeGrocery/BestSellingProducts';
 
 const Grocery = ({ products }) => {
-    return (
-       <div className="grocery-demo">
-            <TopHeader />
-            <Navbar />
-            <Banner />
-            <RecentProducts products={products.slice(0, 6)} />
-            <CategoryBanner />
-            <PopularProducts products={products.slice(0, 6)} />
-            <Partner />
-            <BestSellingProducts products={products.slice(0, 6)} />
-            <BlogPost />
-            <InstagramFeed />
-            <Footer />
-       </div>
-    )
+  return (
+    <div className="grocery-demo">
+      <TopHeader />
+      <Navbar />
+      <Banner />
+      <RecentProducts products={products.slice(0, 6)} />
+      <CategoryBanner />
+      <PopularProducts products={products.slice(0, 6)} />
+      <Partner />
+      <BestSellingProducts products={products.slice(0, 6)} />
+      <BlogPost />
+      <InstagramFeed />
+      <Footer />
+    </div>
+  )
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'grocery' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'grocery' )
+  }
 }
 
 export default connect(mapStateToProps)(Grocery)

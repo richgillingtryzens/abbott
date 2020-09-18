@@ -13,31 +13,31 @@ import ShopByBrandTwo from '../components/Common/ShopByBrandTwo';
 import RecentBlogPost from '../components/Common/RecentBlogPost';
 
 const HomeThree = ({ products }) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <Banner />
-            <section className="all-products-area ptb-100 bg-f5f5f5">
-                <div className="container">
-                    <RecentProducts products={products} />
-                    <FacilitySliderTwo />
-                    <TrendingProducts products={products} />
-                    <Categories />
-                    <BestSellerProducts products={products} />
-                    <ShopByBrandTwo />
-                </div>
-            </section>
-            <RecentBlogPost />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <Banner />
+      <section className="all-products-area ptb-100 bg-f5f5f5">
+        <div className="container">
+          <RecentProducts products={products} />
+          <FacilitySliderTwo />
+          <TrendingProducts products={products} />
+          <Categories />
+          <BestSellerProducts products={products} />
+          <ShopByBrandTwo />
+        </div>
+      </section>
+      <RecentBlogPost />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'T-Shirt' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'T-Shirt' )
+  }
 }
 
 export default connect(mapStateToProps)(HomeThree);

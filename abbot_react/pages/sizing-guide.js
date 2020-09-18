@@ -8,24 +8,24 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class SizingGuide extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Sizing Guide" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Sizing Guide" 
-                /> 
-                <MenWomensApparelSizing />
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Sizing Guide" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Sizing Guide" 
+        /> 
+        <MenWomensApparelSizing />
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default SizingGuide;

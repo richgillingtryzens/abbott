@@ -8,24 +8,24 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class Compare extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Compare" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Compare" 
-                /> 
-                <CompareTable /> 
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Compare" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Compare" 
+        /> 
+        <CompareTable /> 
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Compare;

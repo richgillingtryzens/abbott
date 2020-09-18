@@ -8,24 +8,24 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class Contact extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Contact Us" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Contact Us" 
-                /> 
-                <ContactForm />
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Contact Us" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Contact Us" 
+        /> 
+        <ContactForm />
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Contact;

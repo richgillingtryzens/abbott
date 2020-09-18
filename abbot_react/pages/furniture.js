@@ -11,25 +11,25 @@ import Footer from '../components/Layouts/Footer';
 import RecentProducts from '../components/Shared/RecentProducts';
 
 const Furniture = ({ products }) => {
-    return (
-       <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <Banner />
-            <CategoryBanner />
-            <RecentProducts products={products.slice(0, 9)} />
-            <Partner />
-            <BlogPost />
-            <InstagramFeed />
-            <Footer />
-       </React.Fragment>
-    )
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <Banner />
+      <CategoryBanner />
+      <RecentProducts products={products.slice(0, 9)} />
+      <Partner />
+      <BlogPost />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  )
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products.filter( product => product.type == 'furniture' )
-    }
+  return {
+    products: state.products.filter( product => product.type == 'furniture' )
+  }
 }
 
 export default connect(mapStateToProps)(Furniture)

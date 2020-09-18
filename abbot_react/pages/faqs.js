@@ -8,26 +8,26 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class Faqs extends Component {
-    render() {
-        return (
-            <React.Fragment>
-               <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Frequently Asked Question" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="FAQ's" 
-                /> 
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Frequently Asked Question" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="FAQ's" 
+        /> 
 
-                <FaqsContent />
+        <FaqsContent />
 
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default Faqs;

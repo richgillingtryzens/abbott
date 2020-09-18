@@ -8,24 +8,24 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 class SingleBlog3 extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <TopHeader />
-                <Navbar />
-                <PageBanner 
-                    pageTitle="Blog Details" 
-                    homePageUrl="/" 
-                    homePageText="Home" 
-                    activePageText="Blog Details" 
-                /> 
-                <BlogDetailsThree />
-                <FacilitySlider />
-                <InstagramFeed />
-                <Footer />
-            </React.Fragment>
-        );
-    }
+  render() {
+    return (
+      <React.Fragment>
+        <TopHeader />
+        <Navbar />
+        <PageBanner 
+          pageTitle="Blog Details" 
+          homePageUrl="/" 
+          homePageText="Home" 
+          activePageText="Blog Details" 
+        /> 
+        <BlogDetailsThree />
+        <FacilitySlider />
+        <InstagramFeed />
+        <Footer />
+      </React.Fragment>
+    );
+  }
 }
 
 export default SingleBlog3;

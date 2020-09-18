@@ -9,30 +9,30 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 const ProductsWithoutSidebar = ({ products }) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <PageBanner 
-                pageTitle="Women's" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Products" 
-            /> 
-            <section className="products-area pt-100 pb-70">
-                <ProductsNoSidebar products={products} />
-            </section>
-            <FacilitySlider />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <PageBanner 
+        pageTitle="Women's" 
+        homePageUrl="/" 
+        homePageText="Home" 
+        activePageText="Products" 
+      /> 
+      <section className="products-area pt-100 pb-70">
+        <ProductsNoSidebar products={products} />
+      </section>
+      <FacilitySlider />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products
-    }
+  return {
+    products: state.products
+  }
 }
 
 export default connect(mapStateToProps)(ProductsWithoutSidebar);

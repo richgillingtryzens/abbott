@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import TopHeader from '../components/Layouts/TopHeader';
 import Navbar from '../components/Layouts/Navbar';
@@ -9,30 +9,30 @@ import InstagramFeed from '../components/Common/InstagramFeed';
 import Footer from '../components/Layouts/Footer';
 
 const ProductsLeftSidebar = ({products}) => {
-    return (
-        <React.Fragment>
-            <TopHeader />
-            <Navbar />
-            <PageBanner 
-                pageTitle="Women's" 
-                homePageUrl="/" 
-                homePageText="Home" 
-                activePageText="Products" 
-            /> 
-            <section className="products-area pt-100 pb-70">
-                <ProductsWithLeftSidebar products={products} />
-            </section>
-            <FacilitySlider />
-            <InstagramFeed />
-            <Footer />
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <TopHeader />
+      <Navbar />
+      <PageBanner 
+        pageTitle="Women's" 
+        homePageUrl="/" 
+        homePageText="Home" 
+        activePageText="Products" 
+      /> 
+      <section className="products-area pt-100 pb-70">
+        <ProductsWithLeftSidebar products={products} />
+      </section>
+      <FacilitySlider />
+      <InstagramFeed />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
 const mapStateToProps = (state) => {
-    return {
-        products: state.products
-    }
+  return {
+    products: state.products
+  }
 }
 
 export default connect(mapStateToProps)(ProductsLeftSidebar);
