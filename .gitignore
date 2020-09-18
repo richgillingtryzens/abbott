@@ -1,12 +1,18 @@
 react/node_modules
+abbot_react/node_modules
 // .gitnignore
 # next.js build output
 react/.next
+abbot_react/.next
 # dotenv environment variables file (build for Zeit Now)
 react/.env
+abbot_react/.env
 react/.env.build
+abbot_react/.env.build
 # Dependency directories
 # Logs
 react/npm-debug.log*
+abbot_react/npm-debug.log*
 react/yarn-debug.log*
+abbot_react/yarn-debug.log*
 yarn-error.log*
